@@ -21,6 +21,17 @@
 		B23FCC7F1558F1B70026375C /* TestPasswordArchive.zip in Resources */ = {isa = PBXBuildFile; fileRef = B23FCC7E1558F1B70026375C /* TestPasswordArchive.zip */; };
 		C5AE4E64155A12760045F3ED /* IncorrectHeaders.zip in Resources */ = {isa = PBXBuildFile; fileRef = C5AE4E63155A12760045F3ED /* IncorrectHeaders.zip */; };
 		C5AE4E6D155A8B010045F3ED /* SymbolicLink.zip in Resources */ = {isa = PBXBuildFile; fileRef = C5AE4E6C155A8B010045F3ED /* SymbolicLink.zip */; };
+		F981A6F8214B1C5E00AA9400 /* SSZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = B215FB57143AD460003AC546 /* SSZipArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F981A6F9214B1C6200AA9400 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = B215FB58143AD460003AC546 /* SSZipArchive.m */; };
+		F981A701214B1EB800AA9400 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = B215FB4F143AD460003AC546 /* ioapi.c */; };
+		F981A702214B1EBC00AA9400 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = B215FB51143AD460003AC546 /* mztools.c */; };
+		F981A703214B1EBF00AA9400 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = B215FB53143AD460003AC546 /* unzip.c */; };
+		F981A704214B1EC200AA9400 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = B215FB55143AD460003AC546 /* zip.c */; };
+		F981A706214C151700AA9400 /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = B215FB4E143AD460003AC546 /* crypt.h */; };
+		F981A707214C151E00AA9400 /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = B215FB50143AD460003AC546 /* ioapi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F981A708214C151E00AA9400 /* mztools.h in Headers */ = {isa = PBXBuildFile; fileRef = B215FB52143AD460003AC546 /* mztools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F981A709214C151E00AA9400 /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = B215FB54143AD460003AC546 /* unzip.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F981A70A214C151E00AA9400 /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = B215FB56143AD460003AC546 /* zip.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +57,8 @@
 		B23FCC7E1558F1B70026375C /* TestPasswordArchive.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = TestPasswordArchive.zip; sourceTree = "<group>"; };
 		C5AE4E63155A12760045F3ED /* IncorrectHeaders.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = IncorrectHeaders.zip; sourceTree = "<group>"; };
 		C5AE4E6C155A8B010045F3ED /* SymbolicLink.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = SymbolicLink.zip; sourceTree = "<group>"; };
+		F981A6F0214B1C4800AA9400 /* SSZipArchive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SSZipArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F981A6F3214B1C4900AA9400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +72,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F981A6EC214B1C4800AA9400 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -67,6 +87,7 @@
 			children = (
 				B215FB4B143AD449003AC546 /* SSZipArchive */,
 				B215FB5E143AD505003AC546 /* SSZipArchiveTests */,
+				F981A6F1214B1C4900AA9400 /* SSZipArchive */,
 				B215FB12143AD3C7003AC546 /* Frameworks */,
 				B215FB10143AD3C7003AC546 /* Products */,
 			);
@@ -76,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				B215FB30143AD3C7003AC546 /* SSZipArchiveTests.octest */,
+				F981A6F0214B1C4800AA9400 /* SSZipArchive.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,7 +153,31 @@
 			name = SSZipArchiveTests;
 			sourceTree = "<group>";
 		};
+		F981A6F1214B1C4900AA9400 /* SSZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				F981A6F3214B1C4900AA9400 /* Info.plist */,
+			);
+			path = SSZipArchive;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F981A6ED214B1C4800AA9400 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F981A70A214C151E00AA9400 /* zip.h in Headers */,
+				F981A707214C151E00AA9400 /* ioapi.h in Headers */,
+				F981A709214C151E00AA9400 /* unzip.h in Headers */,
+				F981A6F8214B1C5E00AA9400 /* SSZipArchive.h in Headers */,
+				F981A706214C151700AA9400 /* crypt.h in Headers */,
+				F981A708214C151E00AA9400 /* mztools.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		B215FB2F143AD3C7003AC546 /* SSZipArchiveTests */ = {
@@ -152,6 +198,24 @@
 			productReference = B215FB30143AD3C7003AC546 /* SSZipArchiveTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
+		F981A6EF214B1C4800AA9400 /* SSZipArchive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F981A6F7214B1C4900AA9400 /* Build configuration list for PBXNativeTarget "SSZipArchive" */;
+			buildPhases = (
+				F981A6EB214B1C4800AA9400 /* Sources */,
+				F981A6EC214B1C4800AA9400 /* Frameworks */,
+				F981A6ED214B1C4800AA9400 /* Headers */,
+				F981A6EE214B1C4800AA9400 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SSZipArchive;
+			productName = SSZipArchive;
+			productReference = F981A6F0214B1C4800AA9400 /* SSZipArchive.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -160,6 +224,12 @@
 			attributes = {
 				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = "Sam Soffes";
+				TargetAttributes = {
+					F981A6EF214B1C4800AA9400 = {
+						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = B215FB09143AD3C7003AC546 /* Build configuration list for PBXProject "SSZipArchive" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -174,6 +244,7 @@
 			projectRoot = "";
 			targets = (
 				B215FB2F143AD3C7003AC546 /* SSZipArchiveTests */,
+				F981A6EF214B1C4800AA9400 /* SSZipArchive */,
 			);
 		};
 /* End PBXProject section */
@@ -188,6 +259,13 @@
 				C5AE4E64155A12760045F3ED /* IncorrectHeaders.zip in Resources */,
 				C5AE4E6D155A8B010045F3ED /* SymbolicLink.zip in Resources */,
 				B2283D5D155AD80F00F9395A /* Unicode.zip in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F981A6EE214B1C4800AA9400 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +301,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F981A6EB214B1C4800AA9400 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F981A701214B1EB800AA9400 /* ioapi.c in Sources */,
+				F981A6F9214B1C6200AA9400 /* SSZipArchive.m in Sources */,
+				F981A703214B1EBF00AA9400 /* unzip.c in Sources */,
+				F981A704214B1EC200AA9400 /* zip.c in Sources */,
+				F981A702214B1EBC00AA9400 /* mztools.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
@@ -233,6 +323,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -261,6 +352,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -295,6 +387,138 @@
 			};
 			name = Release;
 		};
+		F981A6F5214B1C4900AA9400 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				HEADER_SEARCH_PATHS = "$(SOURCE_DIR)/minizip/**";
+				INFOPLIST_FILE = SSZipArchive/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lp.SSZipArchive;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F981A6F6214B1C4900AA9400 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				HEADER_SEARCH_PATHS = "$(SOURCE_DIR)/minizip/**";
+				INFOPLIST_FILE = SSZipArchive/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lp.SSZipArchive;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -312,6 +536,15 @@
 			buildConfigurations = (
 				B215FB45143AD3C7003AC546 /* Debug */,
 				B215FB46143AD3C7003AC546 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F981A6F7214B1C4900AA9400 /* Build configuration list for PBXNativeTarget "SSZipArchive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F981A6F5214B1C4900AA9400 /* Debug */,
+				F981A6F6214B1C4900AA9400 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
